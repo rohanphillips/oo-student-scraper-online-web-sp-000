@@ -13,7 +13,7 @@ class Scraper
       return_hash["name"] = card.css(".student-name").text
       return_hash["location"] = card.css(".student-location").text
       return_hash["profile_url"] = card.css("a").attribute("href").value
-      retur_array << return_hash
+      return_array << return_hash
     end
     return_array
   end

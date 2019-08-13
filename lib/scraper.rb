@@ -22,7 +22,7 @@ class Scraper
     html = open(profile_url)
     doc = Nokogiri::HTML(html)
     return_hash = {}
-    a = doc.css(".social-icon-container a")
+    a = doc.css(".social-icon-container a[value]")
     binding.pry
   end
 

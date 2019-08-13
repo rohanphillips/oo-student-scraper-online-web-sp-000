@@ -11,7 +11,7 @@ class Scraper
       student_name = card.css(".student-name").text
       binding.pry
     end
-    
+
   end
 
   def self.scrape_profile_page(profile_url)

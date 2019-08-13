@@ -13,6 +13,8 @@ class Scraper
       return_hash["location"] = card.css(".student-location").text
       return_hash["profile_url"] = card.css("a").attribute("href").value
     end
+    profile_card = doc.css("social-icon-container")
+    binding.pry
     return_hash
   end
 
@@ -21,7 +23,7 @@ class Scraper
     doc = Nokogiri::HTML(html)
     return_hash = {}
     profile_card = doc.css("social-icon-container")
-    binding.pry
+
   end
 
 end

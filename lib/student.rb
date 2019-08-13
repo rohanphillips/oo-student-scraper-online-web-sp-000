@@ -1,4 +1,8 @@
+require_relative '../lib/concerns/memorable'
+
 class Student
+  extend Memorable::ClassMethods
+  include Memorable::InstanceMethods
 
   attr_accessor :name, :location, :twitter, :linkedin, :github, :blog, :profile_quote, :bio, :profile_url
 
@@ -6,7 +10,7 @@ class Student
 
   def initialize(student_hash)
     student_hash.each{|key, value| self.send(("#{key}="), value)}
-    @@all << self
+    save
   end
 
   def self.create_from_collection(students_array)
@@ -17,7 +21,4 @@ class Student
 
   end
 
-  def self.all
-    @@all
-  end
 end

@@ -35,7 +35,8 @@ class Scraper
         return_hash[:blog] = link
       end
     end
-    a = doc.css(".profile-quote").text
+    return_hash[:profile_quote] = doc.css(".profile-quote").text
+    a = doc.css(".bio-content content-holder")
     binding.pry
   end
 

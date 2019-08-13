@@ -15,7 +15,6 @@ class Scraper
       return_hash[:profile_url] = card.css("a").attribute("href").value
       return_array << return_hash
     end
-    binding.pry
     return_array
   end
 

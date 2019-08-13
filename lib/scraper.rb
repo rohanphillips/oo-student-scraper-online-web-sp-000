@@ -10,7 +10,7 @@ class Scraper
     student_card = doc.css(".student-card")
     student_card.each do |card|
       return_hash = {}
-      return_hash["location"] = card.css(".student-location").text
+      return_hash[":#{location}"] = card.css(".student-location").text
       return_hash["name"] = card.css(".student-name").text
       return_hash["profile_url"] = card.css("a").attribute("href").value
       return_array << return_hash

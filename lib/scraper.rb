@@ -27,17 +27,16 @@ class Scraper
       link = hash.attribute("href").value
       if link.include? "twitter"
         return_hash[:twitter] = link
-      end
-      if link.include? "linkedin"
+      elsif link.include? "linkedin"
         return_hash[:linkedin] = link
-      end
-      if link.include? "github"
+      elsif link.include? "github"
         return_hash[:github] = link
-      end
-      if link.include? "learn"
+      elsif link.include? "learn"
         return_hash[:blog] = link
       end
     end
+    a = doc.css(".profile-quote")
+    binding.pry
   end
 
 end

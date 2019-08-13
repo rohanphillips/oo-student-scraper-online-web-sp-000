@@ -31,7 +31,7 @@ class Scraper
         return_hash[:linkedin] = link
       elsif link.include? "github"
         return_hash[:github] = link
-      elsif link.include? "learn"
+      elsif link != ""
         return_hash[:blog] = link
       end
     end

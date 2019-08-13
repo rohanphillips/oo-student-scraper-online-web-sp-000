@@ -23,7 +23,9 @@ class Scraper
     doc = Nokogiri::HTML(html)
     return_hash = {}
     a = doc.css(".social-icon-container a")
-    binding.pry
+    a.each do |hash|
+      binding.pry
+    end
   end
 
 end

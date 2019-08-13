@@ -10,7 +10,7 @@ class Scraper
     student_card.each do |card|
       student_name = card.css(".student-name").text
       student_location = card.css(".student-location").text
-      student_url = card.css("a").attribute('.href').value
+      student_url = card.css("a").attribute("href").value
       binding.pry
     end
 

@@ -10,7 +10,7 @@ class Scraper
     student_card.each do |card|
       student_name = card.css(".student-name").text
       student_location = card.css(".student_location")
-      student_url = card.css("a").target
+      student_url = card.css("a").css("value=")
       binding.pry
     end
 
